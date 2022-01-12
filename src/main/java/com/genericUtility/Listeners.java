@@ -2,7 +2,6 @@ package com.genericUtility;
 
 
 import java.io.File;
-import java.io.IOException;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -33,11 +32,12 @@ public class Listeners implements ITestListener {
 		
 	}
 
-	public void onTestFailure(ITestResult result) {
-	
+	public void onTestFailure(ITestResult result) {		
 		String methodName = result.getMethod().getMethodName();
 		Object obj = result.getInstance();
 		WebDriver driver = null;
+		test.log(Status.FAIL, result.getMethod().getMethodName()+"is failed");
+		test.log(Status.FAIL,result.getThrowable());
 		
 		try {
 			driver = (WebDriver)result.getTestClass().getRealClass().getSuperclass().getDeclaredField("driver").get(obj);
@@ -59,7 +59,7 @@ public class Listeners implements ITestListener {
 		File dest = new File("./screenshot/"+methodName+".PNG");
 		try {
 			Files.copy(src, dest);
-		} catch (IOException e) {
+		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -77,7 +77,8 @@ public class Listeners implements ITestListener {
 	}
 
 	public void onStart(ITestContext context) {
-		ExtentHtmlReporter reporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/ExtentReports/ExtentReports1.html");
+		String methodName = context.getName();
+		ExtentHtmlReporter reporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/ExtentReports/"+methodName+".html");
 		reporter.config().setTheme(Theme.DARK);
 		reporter.config().setDocumentTitle("TestScript");
 		reporter.config().setReportName("automation excution report");

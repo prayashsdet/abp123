@@ -12,18 +12,9 @@ import com.genericUtility.BaseClass;
 @Listeners(com.genericUtility.Listeners.class)
 public class LanguageTest extends BaseClass {
 	@Test
-	public void demo() throws InterruptedException {
+	public void languagetest() throws InterruptedException {
 	
-	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	
-	WebElement ele=driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']"));
-	driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
-	String english=ele.getText();
-	SoftAssert sa =new SoftAssert();
-	sa.assertEquals("(English)", english);
-		System.out.println(english);
-		
-		
+	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		
 		driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
 		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
 		//driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();

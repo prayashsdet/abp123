@@ -11,7 +11,7 @@ import com.genericUtility.BaseClass;
 @Listeners(com.genericUtility.Listeners.class)
 public class TC_HOME_007 extends BaseClass{
 	@Test
-	public void demo() throws MalformedURLException, InterruptedException {
+	public void tchome007() throws MalformedURLException, InterruptedException {
 	
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
