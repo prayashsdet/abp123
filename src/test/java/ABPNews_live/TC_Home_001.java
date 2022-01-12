@@ -2,6 +2,7 @@ package ABPNews_live;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -17,7 +18,11 @@ public class TC_Home_001 extends BaseClass{
 		
 		driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
 		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
-		
+		WebElement ele = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"For You\"]/android.widget.LinearLayout/android.widget.TextView"));
+		if (ele.isSelected()) {
+			WebElement home = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView"));
+		home.click();
+		}
 		Thread.sleep(10000);
 		driver.swipe(513, 1475, 516, 1034, 500);
 		scrollHomePage(driver, "text", "TOP VIDEOS");

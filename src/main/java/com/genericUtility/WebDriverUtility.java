@@ -1,10 +1,5 @@
 package com.genericUtility;
 
-
-
-	
-	
-
 	import java.io.File;
 
 	import org.openqa.selenium.By;
@@ -26,18 +21,11 @@ package com.genericUtility;
 		
 		
 	}
-
-			
-			
-			
-			 public void scrollToElement(AndroidDriver driver ,java.lang.String string,java.lang.String string2) {
-			driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView("+string+"(\""+string2+"\"))");//scroll to element
-		}
+	public void scrollToElement(AndroidDriver driver ,java.lang.String string,java.lang.String string2) {
+		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView("+string+"(\""+string2+"\"))");//scroll to element
+	}
 		
-		public  void swipe(AndroidDriver driver,int x,int y,int z,int w,int time) {
-			driver.swipe(x, y, z, w, time);
-			
-
+	public  void swipe(AndroidDriver driver,int x,int y,int z,int w,int time) {
+		driver.swipe(x, y, z, w, time);
 	}
-	}
-
+}
