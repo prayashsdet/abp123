@@ -1,5 +1,6 @@
 package com.POM;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.MobileElement;
@@ -32,8 +33,14 @@ public class LiveTV {
 	@AndroidFindBy(id= "com.winit.starnews.hin:id/liveTvIcon")
 	private MobileElement liveicon;
 	
+	@AndroidFindBy(xpath="com.winit.starnews.hin:id/menu_livetv")
+	private WebElement tv;
+	
 	@AndroidFindBy(id= "com.winit.starnews.hin:id/mute_btn")
 	private MobileElement mute;
+	
+	@AndroidFindBy(id= "com.winit.starnews.hin:id/liveTvAudioPlayIcon")
+	private MobileElement audioplay;
 	
 	public void exoSub() {
 		exosubtitles.click();
@@ -75,8 +82,17 @@ public class LiveTV {
 		
 	}
 	
+	public void menuliveicon() {
+		tv.click();
+		
+	}
 	public void mutebtn() {
 		mute.click();
+		
+	}
+	
+	public void audioPlayIcon() {
+		audioplay.click();
 		
 	}
 	

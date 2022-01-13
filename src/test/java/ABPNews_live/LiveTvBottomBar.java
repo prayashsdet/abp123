@@ -6,17 +6,13 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
 
 import com.POM.LiveTV;
 import com.genericUtility.BaseClass;
-import com.genericUtility.WebDriverUtility;
 
 import io.appium.java_client.android.AndroidKeyCode;
-@Listeners(com.genericUtility.Listeners.class)
-public class Livetvpage extends BaseClass{
-	@Test
+
+public class LiveTvBottomBar extends BaseClass {
 	public void homelivetv() throws MalformedURLException, InterruptedException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
@@ -30,7 +26,7 @@ public class Livetvpage extends BaseClass{
 		
 		
 		LiveTV lt = new LiveTV(driver);
-		lt.livetvicon();
+		lt.menuliveicon();
 		
 		Thread.sleep(10000);
 		lt.skipAd();
