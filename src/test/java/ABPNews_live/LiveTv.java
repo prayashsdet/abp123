@@ -23,7 +23,10 @@ public class LiveTv extends BaseClass{
 			WebDriverUtility wdu = new WebDriverUtility();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
-			driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+			driver.findElement(By.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button")).click();
+			driver.findElement(By.id("android:id/button2")).click();
+			
+//			driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
 			WebElement ele = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"For You\"]/android.widget.LinearLayout/android.widget.TextView"));
 			if (ele.isSelected()) {
 				WebElement home = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView"));
@@ -34,15 +37,14 @@ public class LiveTv extends BaseClass{
 			Thread.sleep(5000);
 			driver.swipe(513, 585, 532, 1258, 500);
 			
+			Thread.sleep(6000);
 			lt.skipAd();
-			Thread.sleep(25000);
-			lt.exoSub();
-			//wdu.TapOnElement(ele1);
 			
+			lt.exoSub();		
 			driver.pressKeyCode(AndroidKeyCode.KEYCODE_MEDIA_PAUSE);
 			Thread.sleep(5000);
 			driver.pressKeyCode(AndroidKeyCode.KEYCODE_MEDIA_PLAY);
-			
+
 			lt.qualityic();
 			lt.lowres();
 			Thread.sleep(5000);
@@ -64,3 +66,13 @@ public class LiveTv extends BaseClass{
 		
 		}
 }
+
+
+
+
+
+
+
+
+
+
