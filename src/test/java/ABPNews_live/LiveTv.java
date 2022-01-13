@@ -29,42 +29,37 @@ public class LiveTv extends BaseClass{
 				WebElement home = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView"));
 			home.click();
 			}
+			
+			LiveTV lt = new LiveTV(driver);
 			Thread.sleep(5000);
 			driver.swipe(513, 585, 532, 1258, 500);
-			//driver.wait(25000);
+			
+			lt.skipAd();
 			Thread.sleep(25000);
-			driver.findElement(By.id("com.winit.starnews.hin:id/exo_subtitles")).click();
+			lt.exoSub();
 			//wdu.TapOnElement(ele1);
 			
 			driver.pressKeyCode(AndroidKeyCode.KEYCODE_MEDIA_PAUSE);
+			Thread.sleep(5000);
 			driver.pressKeyCode(AndroidKeyCode.KEYCODE_MEDIA_PLAY);
-			
-			LiveTV lt = new LiveTV(driver);
-//			driver.findElement(By.id("com.winit.starnews.hin:id/stream_quality_icon")).click();
-//			driver.findElement(By.xpath("//android.widget.TextView[@text='180p']")).click();
-
-//			driver.findElement(By.id("com.winit.starnews.hin:id/stream_quality_icon")).click();
-//			driver.findElement(By.xpath("//android.widget.TextView[@text='234p']")).click();
-//			
-//			driver.findElement(By.id("com.winit.starnews.hin:id/stream_quality_icon")).click();
-//			driver.findElement(By.xpath("//android.widget.TextView[@text='720p']")).click();
-//			
-//			driver.findElement(By.id("com.winit.starnews.hin:id/stream_quality_icon")).click();
-//			driver.findElement(By.xpath("//android.widget.TextView[@text='Auto']")).click();
 			
 			lt.qualityic();
 			lt.lowres();
+			Thread.sleep(5000);
+			lt.exoSub();
 			lt.qualityic();
 			lt.mediumres();
+			Thread.sleep(5000);
+			lt.exoSub();
 			lt.qualityic();
 			lt.highres();
+			Thread.sleep(5000);
+			lt.exoSub();
 			lt.qualityic();
 			lt.autores();
 			
-			
-			driver.findElement(By.id("com.winit.starnews.hin:id/mute_btn")).click();
-			driver.findElement(By.id("com.winit.starnews.hin:id/mute_btn")).click();
-			
+			lt.mutebtn();
+			lt.mutebtn();
 			
 		
 		}

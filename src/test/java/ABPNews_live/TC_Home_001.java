@@ -12,7 +12,7 @@ import io.appium.java_client.android.AndroidDriver;
 @Listeners(com.genericUtility.Listeners.class)
 public class TC_Home_001 extends BaseClass{
 	@Test
-	public void AbpHindi() throws Throwable
+	public void scrolltoptobottom() throws Throwable
 	{
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		

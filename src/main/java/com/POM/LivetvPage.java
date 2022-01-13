@@ -7,7 +7,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class LiveTV {
+public class LivetvPage {
 	@AndroidFindBy(id= "com.winit.starnews.hin:id/exo_subtitles")
 	private MobileElement exosubtitles;
 	
@@ -25,15 +25,6 @@ public class LiveTV {
 	
 	@AndroidFindBy(xpath= "//android.widget.TextView[@text='Auto']")
 	private MobileElement auto;
-	
-	@AndroidFindBy(xpath= "//android.widget.Button[@text='Skip Ad']")
-	private MobileElement skip;
-	
-	@AndroidFindBy(id= "com.winit.starnews.hin:id/liveTvIcon")
-	private MobileElement liveicon;
-	
-	@AndroidFindBy(id= "com.winit.starnews.hin:id/mute_btn")
-	private MobileElement mute;
 	
 	public void exoSub() {
 		exosubtitles.click();
@@ -65,22 +56,7 @@ public class LiveTV {
 		
 	}
 	
-	public void skipAd() {
-		skip.click();
-		
-	}
-	
-	public void livetvicon() {
-		liveicon.click();
-		
-	}
-	
-	public void mutebtn() {
-		mute.click();
-		
-	}
-	
-	public LiveTV(AndroidDriver driver) {
+	public LivetvPage(AndroidDriver driver) {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 }

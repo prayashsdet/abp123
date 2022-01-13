@@ -36,7 +36,12 @@
     	<artifactId>poi-ooxml</artifactId>
     	<version>3.17</version>
 	</dependency>
-
+	<!-- https://mvnrepository.com/artifact/io.testproject/java-sdk -->
+	<dependency>
+		<groupId>io.testproject</groupId>
+		<artifactId>java-sdk</artifactId>
+		<version>1.2.3-RELEASE</version>
+	</dependency>
 	<dependency>
 		<groupId>com.aventstack</groupId>
 		<artifactId>extentreports</artifactId>

@@ -77,8 +77,7 @@ public class Listeners implements ITestListener {
 	}
 
 	public void onStart(ITestContext context) {
-		String methodName = context.getName();
-		ExtentHtmlReporter reporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/ExtentReports/"+methodName+".html");
+		ExtentHtmlReporter reporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/ExtentReports.html");
 		reporter.config().setTheme(Theme.DARK);
 		reporter.config().setDocumentTitle("TestScript");
 		reporter.config().setReportName("automation excution report");
