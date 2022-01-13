@@ -23,7 +23,7 @@ import com.genericUtility.BaseClass;
 @Listeners(com.genericUtility.Listeners.class)
 public class WebStoriesViewAll extends BaseClass{
 	@Test
-	public void demo() throws InterruptedException, IOException, EncryptedDocumentException, InvalidFormatException {
+	public void webstories() throws InterruptedException, IOException, EncryptedDocumentException, InvalidFormatException {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
 		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();		

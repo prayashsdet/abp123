@@ -11,7 +11,7 @@ import com.genericUtility.BaseClass;
 @Listeners(com.genericUtility.Listeners.class)
 public class StoryCard1 extends BaseClass {
 	@Test
-	public void demo() throws Throwable  {
+	public void storycard1() throws Throwable  {
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
 	driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();

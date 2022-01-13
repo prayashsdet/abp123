@@ -17,7 +17,7 @@ import io.appium.java_client.android.AndroidKeyCode;
 @Listeners(com.genericUtility.Listeners.class)
 public class Advertisements2 extends BaseClass {
 	@Test
-	public void demo() throws MalformedURLException, InterruptedException {
+	public void add2() throws MalformedURLException, InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();

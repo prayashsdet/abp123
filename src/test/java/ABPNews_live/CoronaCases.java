@@ -16,7 +16,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class CoronaCases extends BaseClass {
 	Formatter fmt = new Formatter();
 	@Test
-	public void demo() throws Throwable {
+	public void coronavcases() throws Throwable {
 	
 	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	

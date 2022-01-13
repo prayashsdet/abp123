@@ -12,7 +12,7 @@ import com.genericUtility.BaseClass;
 @Listeners(com.genericUtility.Listeners.class)
 public class ViewAll extends BaseClass {
 	@Test
-	public void demo() throws MalformedURLException, InterruptedException {
+	public void viewall() throws MalformedURLException, InterruptedException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
 		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();

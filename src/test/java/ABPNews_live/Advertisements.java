@@ -11,7 +11,7 @@ import com.genericUtility.BaseClass;
 @Listeners(com.genericUtility.Listeners.class)
 public class Advertisements extends BaseClass {
 	@Test
-	public void demo() throws Throwable  {
+	public void add1() throws Throwable  {
 	
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();

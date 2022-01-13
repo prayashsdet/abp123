@@ -4,7 +4,6 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -15,22 +14,8 @@ import io.appium.java_client.android.AndroidKeyCode;
 @Listeners(com.genericUtility.Listeners.class)
 public class TC_Home_001 extends BaseClass{
 	@Test
-	public void demo() throws Throwable {
-		DesiredCapabilities dc = new DesiredCapabilities();
-		//common DC for android or IOS
-		dc.setCapability("automationName", "appium");
-		dc.setCapability("platformName", "Android");
-		dc.setCapability("noReset", true);
-		//DC for android
-		dc.setCapability("appPackage", "com.winit.starnews.hin");
-		dc.setCapability("appActivity",".activities.ActivityChannelSelectionList");
-		
-		//Android server port no
-		URL url = new URL("http://localhost:4723/wd/hub");
-		
-		AndroidDriver driver = new AndroidDriver(url,dc);
-		
-		
+
+	public void demo() throws Throwable {		
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			
 			driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
@@ -139,6 +124,20 @@ public class TC_Home_001 extends BaseClass{
 //			
 		        
 		       
+	public void scrolltoptobottom() throws Throwable
+	{
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
+		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		WebElement ele = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"For You\"]/android.widget.LinearLayout/android.widget.TextView"));
+		if (ele.isSelected()) {
+			WebElement home = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView"));
+		home.click();
+		}
+		Thread.sleep(10000);
+		driver.swipe(513, 1475, 516, 1034, 500);
+		scrollHomePage(driver, "text", "TOP VIDEOS");
 		scrollHomePage(driver, "text", "BLOG");
 		 driver.findElement(By.xpath("//android.widget.TextView[@text='BLOG']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id=\"com.winit.starnews.hin:id/villAllCardView\"]")).click();
 	        driver.findElement(By.id("com.winit.starnews.hin:id/newsHeadingText")).getText();
