@@ -1,6 +1,5 @@
 package ABPNews_live;
 
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,80 +12,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 @Listeners(com.genericUtility.Listeners.class)
 public class TC_Home_001 extends BaseClass{
-	@Test
-
-	public void articles() throws Throwable {		
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			Thread.sleep(3000);
-			driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
-//			driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
-			 WebElement ele = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"For You\"]/android.widget.LinearLayout/android.widget.TextView"));
-				if (ele.isSelected()) {
-					WebElement home = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView"));
-					Thread.sleep(10000);
-					home.click();
-				}
-				Thread.sleep(6000);
-			
-				driver.swipe(508, 2078, 521, 1028,600);
-				driver.swipe(508, 2078, 521, 1028,1600);
-				
-				driver.findElement(By.id("com.winit.starnews.hin:id/newsHeadingText")).click();
-				Thread.sleep(3000);
-
-				WebElement dateandtime = driver.findElement(By.xpath("//android.widget.TextView[@resource-id='com.winit.starnews.hin:id/recentTimeText']"));
-				System.out.println(dateandtime.getText());
-				WebElement storycardtitle = driver.findElement(By.xpath("//android.widget.TextView[@resource-id='com.winit.starnews.hin:id/newsTitleTextview']"));
-				System.out.println(storycardtitle.getText());
-				Thread.sleep(6000);	
-                scrollHomePage(driver,"text","Tags:");
-                WebElement tags = driver.findElement(By.id("com.winit.starnews.hin:id/tag_layout_parent"));
-                System.out.println(tags.getText());
-                for (int i=0;i<=6;i++) {
-                	driver.swipe(489, 583, 489, 1926, 1000);
-                }
-
-            
-            
-              driver.pressKeyCode(AndroidKeyCode.BACK);
-              Thread.sleep(3000);
-              driver.findElement(By.xpath("(//android.widget.TextView[@resource-id='com.winit.starnews.hin:id/newsHeadingText'])[2]")).click();
-              WebElement title = driver.findElement(By.id("com.winit.starnews.hin:id/newsTitleTextview"));
-              System.out.println(title.getText());
-              WebElement time = driver.findElement(By.id( "com.winit.starnews.hin:id/recentTimeText"));
-              System.out.println(time.getText());
-              Thread.sleep(3000);
-              scrollHomePage(driver,"text","Tags:");
-              WebElement tags1 = driver.findElement(By.id("com.winit.starnews.hin:id/tag_layout_parent"));
-              System.out.println(tags.getText());
-              Thread.sleep(3000);
-              for (int i=0;i<=6;i++) {
-     	        driver.swipe(489, 583, 489, 1926, 1000);
-              }
-
-              driver.pressKeyCode(AndroidKeyCode.BACK);
-              Thread.sleep(3000);
-              driver.findElement(By.xpath("(//android.widget.TextView[@resource-id='com.winit.starnews.hin:id/newsHeadingText'])[3]")).click();
-              WebElement title1 = driver.findElement(By.id("com.winit.starnews.hin:id/newsTitleTextview"));
-              
-              System.out.println(title1.getText());
-              WebElement time1 = driver.findElement(By.id("com.winit.starnews.hin:id/recentTimeText"));
-             
-              System.out.println(time1.getText());
-              
-             Thread.sleep(6000);
-             scrollHomePage(driver,"text","Tags:");
-             WebElement tags2 = driver.findElement(By.id("com.winit.starnews.hin:id/tag_layout_parent"));
-             System.out.println(tags.getText());
-             Thread.sleep(6000);
-             for (int i=0;i<=6;i++) {
-       	        driver.swipe(489, 583, 489, 1926, 1000);
-       	     }
-
-             driver.pressKeyCode(AndroidKeyCode.BACK);
-             Thread.sleep(3000);	
-	}    
-		       
+	@Test		       
 	public void scrolltoptobottom() throws Throwable {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		

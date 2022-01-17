@@ -15,19 +15,15 @@ public class BaseClass {
 	
 	public AndroidDriver driver;
 	@BeforeMethod
-	
 	public void openApp() throws Throwable {
 		DesiredCapabilities dc=new DesiredCapabilities();
 		dc.setCapability("platformName", "Android");
 		dc.setCapability("automationName", "Appium");
-		//dc.setCapability("deviceName", "LN89WO5HNZ4TMJSC");
-		dc.setCapability("noReset", true);
 		dc.setCapability("appPackage", "com.winit.starnews.hin");
 		dc.setCapability("appActivity", ".activities.Welcome");
 		
 		URL url=new URL(" http://localhost:4723/wd/hub");
 		driver=new AndroidDriver(url, dc);
-//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 	
 	@AfterMethod

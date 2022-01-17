@@ -26,7 +26,7 @@ public class LiveTv extends BaseClass{
 //			driver.findElement(By.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button")).click();
 //			driver.findElement(By.id("android:id/button2")).click();
 			
-//			driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+			driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
 			WebElement ele = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"For You\"]/android.widget.LinearLayout/android.widget.TextView"));
 			if (ele.isSelected()) {
 				WebElement home = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView"));
