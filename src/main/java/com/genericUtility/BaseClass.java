@@ -21,7 +21,6 @@ public class BaseClass {
 		dc.setCapability("automationName", "Appium");
 		dc.setCapability("appPackage", "com.winit.starnews.hin");
 		dc.setCapability("appActivity", ".activities.Welcome");
-		
 		URL url=new URL(" http://localhost:4723/wd/hub");
 		driver=new AndroidDriver(url, dc);
 	}

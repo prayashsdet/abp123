@@ -69,6 +69,7 @@ public class Listeners implements ITestListener {
 	public void onTestSkipped(ITestResult result) {
 		test.log(Status.SKIP, result.getMethod().getMethodName()+"is skipped");
 		test.log(Status.SKIP, result.getThrowable());
+		
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {

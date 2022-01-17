@@ -4,27 +4,625 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class HomePage {
-	@AndroidFindBy(xpath= "//android.widget.FrameLayout[@bounds='[30,222][1050,982]']")
-	private MobileElement homeCard1;
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='(English)']")
+	private MobileElement selectEnglishLanguage;
 	
-	@AndroidFindBy(id= "//android.widget.FrameLayout[@bounds='[30,1006][525,1697]']")
-	private MobileElement homeCard2;
+	@AndroidFindBy(xpath= "//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"For You\"]/android.widget.LinearLayout/android.widget.TextView")
+	private MobileElement forYouSection;
 	
-	@AndroidFindBy(id= "//android.widget.FrameLayout[@bounds='[555,1006][1050,1697]']")
-	private MobileElement homeCard3;
+	@AndroidFindBy(xpath= "//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView")
+	private MobileElement HomeSection;
 	
-	@AndroidFindBy(id= "//android.widget.FrameLayout[@bounds='[30,222][1050,874]']")
-	private MobileElement homeCard4;
+	@AndroidFindBy(id= "com.winit.starnews.hin:id/newsHeadingText")
+	private MobileElement FirstStoryCard;
 	
-	@AndroidFindBy(id= "//android.widget.FrameLayout[@bounds='[30,1684][1050,1764]']")
-	private MobileElement homeCard5;
+	@AndroidFindBy(id= "(//android.widget.TextView[@resource-id='com.winit.starnews.hin:id/newsHeadingText'])[2]")
+	private MobileElement SecondStoryCard;
 	
-	@AndroidFindBy(xpath= "//android.widget.LinearLayout[@resource-id=\"com.winit.starnews.hin:id/linearLayout\"]/descendant::android.widget.TextView[@text='View All']")
-	private MobileElement viewAllBlog;
+	@AndroidFindBy(xpath= "(//android.widget.TextView[@resource-id='com.winit.starnews.hin:id/newsHeadingText'])[3]")
+	private MobileElement ThirdStoryCard;
 	
-	@AndroidFindBy(xpath= "//android.widget.LinearLayout[@resource-id=\"com.winit.starnews.hin:id/showVHContainer\"]/descendant::android.widget.TextView[@text='View All']")
-	private MobileElement unCut;
 	
-	@AndroidFindBy(id= "//android.widget.FrameLayout[@bounds='[30,1684][1050,1764]']")
-	private MobileElement homeCard8;
+	@AndroidFindBy(xpath= "//android.widget.TextView[@resource-id='com.winit.starnews.hin:id/newsTitleTextview']")
+	private MobileElement titlestamp;
+	
+	
+	@AndroidFindBy(id= "com.winit.starnews.hin:id/recentTimeText")
+	private MobileElement timestamp;
+	
+	@AndroidFindBy(xpath= "com.winit.starnews.hin:id/tag_layout_parent")
+	private MobileElement tags;
+	
+	
+	
+	
+
+	
+	public void SelectEnglishLanguage() {
+		selectEnglishLanguage.click();
+	}
+
+
+
+
+
+
+	
+
+
+
+
+
+
+	public MobileElement getSelectEnglishLanguage() {
+		return selectEnglishLanguage;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getForYouSection() {
+		return forYouSection;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getHomeSection() {
+		return HomeSection;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getFirstStoryCard() {
+		return FirstStoryCard;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getSecondStoryCard() {
+		return SecondStoryCard;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getThirdStoryCard() {
+		return ThirdStoryCard;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getTitlestamp() {
+		return titlestamp;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getTimestamp() {
+		return timestamp;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getTags() {
+		return tags;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllBlog() {
+		return ViewAllBlog;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllWebStories() {
+		return ViewAllWebStories;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllTVSHOWS() {
+		return ViewAllTVSHOWS;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllPHOTOGALLERY() {
+		return ViewAllPHOTOGALLERY;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllMOVIEREVIEWS() {
+		return ViewAllMOVIEREVIEWS;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllSPORTS() {
+		return ViewAllSPORTS;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllWORLD() {
+		return ViewAllWORLD;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllBUSINESS() {
+		return ViewAllBUSINESS;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllAUTO() {
+		return ViewAllAUTO;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllLIFESTYLE() {
+		return ViewAllLIFESTYLE;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllHEALTH() {
+		return ViewAllHEALTH;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllSTORIES() {
+		return ViewAllSTORIES;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public MobileElement getViewAllTRENDINGTOPICS() {
+		return ViewAllTRENDINGTOPICS;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public void setHomeSection() {
+		HomeSection.click();
+	}
+
+
+
+
+
+
+	public void setFirstStoryCard() {
+		FirstStoryCard.click();
+	}
+
+
+
+
+
+
+	public void setSecondStoryCard() {
+		SecondStoryCard.click();
+	}
+
+
+
+
+
+
+	public void setThirdStoryCard() {
+		ThirdStoryCard.click();
+	}
+
+
+
+
+
+
+	public void setTitlestamp() {
+	titlestamp.getText();
+	}
+
+
+
+
+
+
+	public void setTimestamp() {
+		timestamp.getText();
+	}
+
+
+
+
+
+
+	public void setTags() {
+		tags.getText();
+	}
+
+
+
+
+
+
+	public void setViewAllBlog() {
+		ViewAllBlog.click();
+	}
+
+
+
+
+
+
+	public void setViewAllWebStories() {
+		ViewAllWebStories.click();
+	}
+
+
+
+
+
+
+	public void setViewAllTVSHOWS() {
+		ViewAllTVSHOWS.click();
+	}
+
+
+
+
+
+
+	public void setViewAllPHOTOGALLERY() {
+		ViewAllPHOTOGALLERY.click();
+	}
+
+
+
+
+
+
+	public void setViewAllMOVIEREVIEWS() {
+		ViewAllMOVIEREVIEWS.click();
+	}
+
+
+
+
+
+
+	public void setViewAllSPORTS() {
+		ViewAllSPORTS.click();
+	}
+
+
+
+
+
+
+	public void setViewAllWORLD() {
+		ViewAllWORLD.click();
+	}
+
+
+
+
+
+
+	public void setViewAllBUSINESS() {
+		ViewAllBUSINESS.click();
+	}
+
+
+
+
+
+
+	public void setViewAllLIFESTYLE() {
+		ViewAllLIFESTYLE.click();
+	}
+
+
+
+
+
+
+	public void setViewAllHEALTH() {
+		ViewAllHEALTH.click();
+	}
+
+
+
+
+
+
+	public void setViewAllSTORIES() {
+		ViewAllSTORIES.click();
+	}
+
+
+
+
+
+
+	public void setViewAllTRENDINGTOPICS() {
+		ViewAllTRENDINGTOPICS.click();
+	}
+	
+	public void setViewAllAUTO() {
+		ViewAllAUTO.click();
+	}
+
+
+
+
+
+
+
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='BLOG']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllBlog;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='WEB STORIES']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllWebStories;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='TV SHOWS']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllTVSHOWS;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='PHOTO GALLERY']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllPHOTOGALLERY;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='MOVIE REVIEWS']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllMOVIEREVIEWS;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='SPORTS']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllSPORTS;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='WORLD']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllWORLD;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='BUSINESS']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllBUSINESS;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='AUTO']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllAUTO;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='LIFESTYLE']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllLIFESTYLE;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='HEALTH']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllHEALTH;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='STORIES']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllSTORIES;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='TRENDING TOPICS']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
+	private MobileElement ViewAllTRENDINGTOPICS;
+	
+	
+	
+	
+	
 }

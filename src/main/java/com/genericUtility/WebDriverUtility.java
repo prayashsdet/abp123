@@ -25,7 +25,11 @@ package com.genericUtility;
 		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView("+string+"(\""+string2+"\"))");//scroll to element
 	}
 		
-	public  void swipe(AndroidDriver driver,int x,int y,int z,int w,int time) {
-		driver.swipe(x, y, z, w, time);
+	public  void swipedown(AndroidDriver driver) {
+		driver.swipe(508, 2078, 521, 1028,600);
+	}
+	public  void swipeup(AndroidDriver driver) {
+		driver.swipe(489, 583, 489, 1926, 1000);
 	}
 }
+	
