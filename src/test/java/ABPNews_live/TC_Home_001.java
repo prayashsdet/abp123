@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.POM.ForYouPage;
 import com.POM.HomePage;
+import com.POM.SelectLanguage;
 import com.genericUtility.BaseClass;
 import com.genericUtility.WebDriverUtility;
 
@@ -19,15 +21,16 @@ public class TC_Home_001 extends BaseClass{
 	public void articles() throws Throwable {
 		
 		WebDriverUtility wb =new WebDriverUtility();
-		HomePage hp =new HomePage();
-	
+		HomePage hp =new HomePage(driver);
+		ForYouPage fyp = new ForYouPage(driver);
+		SelectLanguage sl = new SelectLanguage(driver);
 		
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			Thread.sleep(3000);
 			driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
 //			driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
 			 
-				if (hp.getForYouSection().isSelected()) {
+				if (fyp.getForYouSection().isSelected()) {
 					
 					hp.setHomeSection();
 				}
@@ -36,7 +39,7 @@ public class TC_Home_001 extends BaseClass{
 				wb.swipedown(driver);
 				driver.swipe(508, 2078, 521, 1028,1600);
 				
-				hp.SelectEnglishLanguage();
+				sl.englishlang();
 				Thread.sleep(3000);
                 hp.setFirstStoryCard();
 				hp.setTimestamp();
@@ -129,19 +132,19 @@ public class TC_Home_001 extends BaseClass{
 			scrollHomePage(driver, "text", "MOVIE REVIEWS");
 			Thread.sleep(3000);
 			
-//			scrollHomePage(driver, "text", "ENTERTAINMENT");
-//			driver.findElement(By.xpath("//android.widget.TextView[@text='ENTERTAINMENT']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id=\"com.winit.starnews.hin:id/villAllCardView\"]")).click();
-//			Thread.sleep(6000);
-//			 for (int i=0;i<=6;i++) {
-//				 wb.swipedown(driver);
-//			 }
-//			 for (int i=0;i<=6;i++) {
-//				 wb.swipeup(driver);
-//			 }
+			scrollHomePage(driver, "text", "ENTERTAINMENT");
+			driver.findElement(By.xpath("//android.widget.TextView[@text='ENTERTAINMENT']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id=\"com.winit.starnews.hin:id/villAllCardView\"]")).click();
+			Thread.sleep(6000);
+			 for (int i=0;i<=6;i++) {
+				 wb.swipedown(driver);
+			 }
+			 for (int i=0;i<=6;i++) {
+				 wb.swipeup(driver);
+			 }
 			 driver.pressKeyCode(AndroidKeyCode.BACK);
 			 Thread.sleep(3000);
 			scrollHomePage(driver, "text", "SPORTS");
-		hp.setViewAllSPORTS();
+			hp.setViewAllSPORTS();
 			Thread.sleep(6000);
 			 for (int i=0;i<=6;i++) {
 				 wb.swipedown(driver);

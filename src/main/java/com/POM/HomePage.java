@@ -1,15 +1,13 @@
 package com.POM;
 
+import org.openqa.selenium.support.PageFactory;
+
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class HomePage {
-	@AndroidFindBy(xpath= "//android.widget.TextView[@text='(English)']")
-	private MobileElement selectEnglishLanguage;
-	
-	@AndroidFindBy(xpath= "//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"For You\"]/android.widget.LinearLayout/android.widget.TextView")
-	private MobileElement forYouSection;
-	
 	@AndroidFindBy(xpath= "//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView")
 	private MobileElement HomeSection;
 	
@@ -26,562 +24,12 @@ public class HomePage {
 	@AndroidFindBy(xpath= "//android.widget.TextView[@resource-id='com.winit.starnews.hin:id/newsTitleTextview']")
 	private MobileElement titlestamp;
 	
-	
 	@AndroidFindBy(id= "com.winit.starnews.hin:id/recentTimeText")
 	private MobileElement timestamp;
 	
 	@AndroidFindBy(xpath= "com.winit.starnews.hin:id/tag_layout_parent")
 	private MobileElement tags;
 	
-	
-	
-	
-
-	
-	public void SelectEnglishLanguage() {
-		selectEnglishLanguage.click();
-	}
-
-
-
-
-
-
-	
-
-
-
-
-
-
-	public MobileElement getSelectEnglishLanguage() {
-		return selectEnglishLanguage;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getForYouSection() {
-		return forYouSection;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getHomeSection() {
-		return HomeSection;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getFirstStoryCard() {
-		return FirstStoryCard;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getSecondStoryCard() {
-		return SecondStoryCard;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getThirdStoryCard() {
-		return ThirdStoryCard;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getTitlestamp() {
-		return titlestamp;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getTimestamp() {
-		return timestamp;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getTags() {
-		return tags;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllBlog() {
-		return ViewAllBlog;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllWebStories() {
-		return ViewAllWebStories;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllTVSHOWS() {
-		return ViewAllTVSHOWS;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllPHOTOGALLERY() {
-		return ViewAllPHOTOGALLERY;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllMOVIEREVIEWS() {
-		return ViewAllMOVIEREVIEWS;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllSPORTS() {
-		return ViewAllSPORTS;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllWORLD() {
-		return ViewAllWORLD;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllBUSINESS() {
-		return ViewAllBUSINESS;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllAUTO() {
-		return ViewAllAUTO;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllLIFESTYLE() {
-		return ViewAllLIFESTYLE;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllHEALTH() {
-		return ViewAllHEALTH;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllSTORIES() {
-		return ViewAllSTORIES;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public MobileElement getViewAllTRENDINGTOPICS() {
-		return ViewAllTRENDINGTOPICS;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public void setHomeSection() {
-		HomeSection.click();
-	}
-
-
-
-
-
-
-	public void setFirstStoryCard() {
-		FirstStoryCard.click();
-	}
-
-
-
-
-
-
-	public void setSecondStoryCard() {
-		SecondStoryCard.click();
-	}
-
-
-
-
-
-
-	public void setThirdStoryCard() {
-		ThirdStoryCard.click();
-	}
-
-
-
-
-
-
-	public void setTitlestamp() {
-	titlestamp.getText();
-	}
-
-
-
-
-
-
-	public void setTimestamp() {
-		timestamp.getText();
-	}
-
-
-
-
-
-
-	public void setTags() {
-		tags.getText();
-	}
-
-
-
-
-
-
-	public void setViewAllBlog() {
-		ViewAllBlog.click();
-	}
-
-
-
-
-
-
-	public void setViewAllWebStories() {
-		ViewAllWebStories.click();
-	}
-
-
-
-
-
-
-	public void setViewAllTVSHOWS() {
-		ViewAllTVSHOWS.click();
-	}
-
-
-
-
-
-
-	public void setViewAllPHOTOGALLERY() {
-		ViewAllPHOTOGALLERY.click();
-	}
-
-
-
-
-
-
-	public void setViewAllMOVIEREVIEWS() {
-		ViewAllMOVIEREVIEWS.click();
-	}
-
-
-
-
-
-
-	public void setViewAllSPORTS() {
-		ViewAllSPORTS.click();
-	}
-
-
-
-
-
-
-	public void setViewAllWORLD() {
-		ViewAllWORLD.click();
-	}
-
-
-
-
-
-
-	public void setViewAllBUSINESS() {
-		ViewAllBUSINESS.click();
-	}
-
-
-
-
-
-
-	public void setViewAllLIFESTYLE() {
-		ViewAllLIFESTYLE.click();
-	}
-
-
-
-
-
-
-	public void setViewAllHEALTH() {
-		ViewAllHEALTH.click();
-	}
-
-
-
-
-
-
-	public void setViewAllSTORIES() {
-		ViewAllSTORIES.click();
-	}
-
-
-
-
-
-
-	public void setViewAllTRENDINGTOPICS() {
-		ViewAllTRENDINGTOPICS.click();
-	}
-	
-	public void setViewAllAUTO() {
-		ViewAllAUTO.click();
-	}
-
-
-
-
-
-
-
 	@AndroidFindBy(xpath= "//android.widget.TextView[@text='BLOG']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
 	private MobileElement ViewAllBlog;
 	
@@ -622,7 +70,90 @@ public class HomePage {
 	private MobileElement ViewAllTRENDINGTOPICS;
 	
 	
+	public void setHomeSection() {
+		HomeSection.click();
+	}
+
+	public void setFirstStoryCard() {
+		FirstStoryCard.click();
+	}
+
+	public void setSecondStoryCard() {
+		SecondStoryCard.click();
+	}
+
+	public void setThirdStoryCard() {
+		ThirdStoryCard.click();
+	}
 	
+	public void setTitlestamp() {
+	titlestamp.getText();
+	}
+
+	public void setTimestamp() {
+		timestamp.getText();
+	}
+
+	public void setTags() {
+		tags.getText();
+	}
+
+	public void setViewAllBlog() {
+		ViewAllBlog.click();
+	}
+
+	public void setViewAllWebStories() {
+		ViewAllWebStories.click();
+	}
+
+	public void setViewAllTVSHOWS() {
+		ViewAllTVSHOWS.click();
+	}
+
+	public void setViewAllPHOTOGALLERY() {
+		ViewAllPHOTOGALLERY.click();
+	}
+
+	public void setViewAllMOVIEREVIEWS() {
+		ViewAllMOVIEREVIEWS.click();
+	}
+
+	public void setViewAllSPORTS() {
+		ViewAllSPORTS.click();
+	}
+
+	public void setViewAllWORLD() {
+		ViewAllWORLD.click();
+	}
+
+	public void setViewAllBUSINESS() {
+		ViewAllBUSINESS.click();
+	}
+
+	public void setViewAllLIFESTYLE() {
+		ViewAllLIFESTYLE.click();
+	}
+
+	public void setViewAllHEALTH() {
+		ViewAllHEALTH.click();
+	}
+
+	public void setViewAllSTORIES() {
+		ViewAllSTORIES.click();
+	}
+
+	public void setViewAllTRENDINGTOPICS() {
+		ViewAllTRENDINGTOPICS.click();
+	}
+	
+	public void setViewAllAUTO() {
+		ViewAllAUTO.click();
+	}
+
+	
+	public HomePage(AndroidDriver driver) {
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+	}
 	
 	
 }
