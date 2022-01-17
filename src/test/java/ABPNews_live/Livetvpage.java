@@ -20,7 +20,7 @@ public class Livetvpage extends BaseClass{
 	public void homelivetv() throws MalformedURLException, InterruptedException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
-		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		//driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
 		WebElement ele = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"For You\"]/android.widget.LinearLayout/android.widget.TextView"));
 		if (ele.isSelected()) {
 			WebElement home = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView"));
@@ -63,7 +63,7 @@ public class Livetvpage extends BaseClass{
 		Thread.sleep(6000);
 		lt.audioPlayIcon();
 		Thread.sleep(6000);
-		lt.audioPlayIcon();
+		lt.vedioplayicon();
 		
 		
 	

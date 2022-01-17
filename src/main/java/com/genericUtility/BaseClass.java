@@ -21,7 +21,7 @@ public class BaseClass {
 		dc.setCapability("platformName", "Android");
 		dc.setCapability("automationName", "Appium");
 		//dc.setCapability("deviceName", "LN89WO5HNZ4TMJSC");
-		dc.setCapability("noReset", true);
+		//dc.setCapability("noReset", true);
 		dc.setCapability("appPackage", "com.winit.starnews.hin");
 		dc.setCapability("appActivity", ".activities.Welcome");
 		

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-01-13T19:01:29 IST" name="Default suite" finished-at="2022-01-13T19:03:42 IST" duration-ms="133140">
+    <groups>
+    </groups>
+    <test started-at="2022-01-13T19:01:29 IST" name="Default test" finished-at="2022-01-13T19:03:42 IST" duration-ms="133140">
+      <class name="ABPNews_live.LiveTvBottomBar">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:ABPNews_live.LiveTvBottomBar@8462f31]" started-at="2022-01-13T19:01:29 IST" name="openApp" finished-at="2022-01-13T19:01:43 IST" duration-ms="14016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="homelivetv()[pri:0, instance:ABPNews_live.LiveTvBottomBar@8462f31]" started-at="2022-01-13T19:01:43 IST" name="homelivetv" finished-at="2022-01-13T19:03:41 IST" duration-ms="118603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homelivetv -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:ABPNews_live.LiveTvBottomBar@8462f31]" started-at="2022-01-13T19:03:41 IST" name="closeApp" finished-at="2022-01-13T19:03:42 IST" duration-ms="480" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- ABPNews_live.LiveTvBottomBar -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

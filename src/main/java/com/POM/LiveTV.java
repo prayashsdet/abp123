@@ -33,7 +33,7 @@ public class LiveTV {
 	@AndroidFindBy(id= "com.winit.starnews.hin:id/liveTvIcon")
 	private MobileElement liveicon;
 	
-	@AndroidFindBy(xpath="com.winit.starnews.hin:id/menu_livetv")
+	@AndroidFindBy(id="com.winit.starnews.hin:id/menu_livetv")
 	private WebElement tv;
 	
 	@AndroidFindBy(id= "com.winit.starnews.hin:id/mute_btn")
@@ -41,6 +41,10 @@ public class LiveTV {
 	
 	@AndroidFindBy(id= "com.winit.starnews.hin:id/liveTvAudioPlayIcon")
 	private MobileElement audioplay;
+	
+	@AndroidFindBy(id= "com.winit.starnews.hin:id/liveTVVideoPlayIcon")
+	private MobileElement vedioplay;
+
 	
 	public void exoSub() {
 		exosubtitles.click();
@@ -93,6 +97,11 @@ public class LiveTV {
 	
 	public void audioPlayIcon() {
 		audioplay.click();
+		
+	}
+	
+	public void vedioplayicon() {
+		vedioplay.click();
 		
 	}
 	

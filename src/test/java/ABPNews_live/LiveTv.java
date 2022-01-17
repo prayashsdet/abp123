@@ -19,14 +19,8 @@ public class LiveTv extends BaseClass{
 		@Test
 		public void homelivetv() throws MalformedURLException, InterruptedException {
 			
-			
-			WebDriverUtility wdu = new WebDriverUtility();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
-//			driver.findElement(By.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button")).click();
-//			driver.findElement(By.id("android:id/button2")).click();
-			
-//			driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
 			WebElement ele = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"For You\"]/android.widget.LinearLayout/android.widget.TextView"));
 			if (ele.isSelected()) {
 				WebElement home = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView"));
@@ -37,7 +31,7 @@ public class LiveTv extends BaseClass{
 			Thread.sleep(5000);
 			driver.swipe(513, 585, 532, 1258, 500);
 			
-			Thread.sleep(6000);
+			Thread.sleep(7000);
 			lt.skipAd();
 			
 			lt.exoSub();		
