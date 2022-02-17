@@ -10,6 +10,9 @@ import org.openqa.selenium.WebDriver;
 
 import com.google.common.io.Files;
 public class TakeScreenshot {
+	public TakeScreenshot(WebDriver driver){
+		this.statDriver=statDriver;
+	}
 	public static WebDriver statDriver;
 		public String takeScreenshot(WebDriver driver, String screenshotName) throws Throwable {
 			String screenshotPath = "./screenshot/"+screenshotName+".PNG";

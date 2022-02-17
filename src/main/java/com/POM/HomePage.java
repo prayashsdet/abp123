@@ -11,8 +11,8 @@ public class HomePage {
 	@AndroidFindBy(xpath= "//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView")
 	private MobileElement HomeSection;
 	
-	@AndroidFindBy(id= "com.winit.starnews.hin:id/newsHeadingText")
-	private MobileElement FirstStoryCard;
+	@AndroidFindBy(xpath= "(//android.widget.ImageView[@resource-id='com.winit.starnews.hin:id/newsImage']/ancestor::androidx.recyclerview.widget.RecyclerView[@resource-id='com.winit.starnews.hin:id/sectionRecycler']/descendant::android.widget.TextView[@resource-id='com.winit.starnews.hin:id/newsHeadingText'])[1]")
+	public MobileElement FirstStoryCard;
 	
 	@AndroidFindBy(id= "(//android.widget.TextView[@resource-id='com.winit.starnews.hin:id/newsHeadingText'])[2]")
 	private MobileElement SecondStoryCard;
@@ -21,17 +21,19 @@ public class HomePage {
 	private MobileElement ThirdStoryCard;
 	
 	
-	@AndroidFindBy(xpath= "//android.widget.TextView[@resource-id='com.winit.starnews.hin:id/newsTitleTextview']")
-	private MobileElement titlestamp;
 	
-	@AndroidFindBy(id= "com.winit.starnews.hin:id/recentTimeText")
-	private MobileElement timestamp;
+	@AndroidFindBy(xpath=" //android.widget.TextView[@resource-id='com.winit.starnews.hin:id/newsTitleTextview']")
+			
+	public MobileElement titlestamp;
+	
+	@AndroidFindBy(xpath= "//android.widget.TextView[@resource-id='com.winit.starnews.hin:id/recentTimeText']")
+	public  MobileElement timestamp;
 	
 	@AndroidFindBy(xpath= "com.winit.starnews.hin:id/tag_layout_parent")
 	private MobileElement tags;
 	
-	@AndroidFindBy(xpath= "//android.widget.TextView[@text='BLOG']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
-	private MobileElement ViewAllBlog;
+	@AndroidFindBy(xpath= "//android.widget.TextView[@text='BLOG']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView']")
+	public MobileElement ViewAllBlog;
 	
 	@AndroidFindBy(xpath= "//android.widget.TextView[@text='WEB STORIES']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
 	private MobileElement ViewAllWebStories;
@@ -69,14 +71,57 @@ public class HomePage {
 	@AndroidFindBy(xpath= "//android.widget.TextView[@text='TRENDING TOPICS']/ancestor::android.widget.LinearLayout[@resource-id='com.winit.starnews.hin:id/linearLayout']/descendant::android.widget.FrameLayout[@resource-id='com.winit.starnews.hin:id/villAllCardView]'")
 	private MobileElement ViewAllTRENDINGTOPICS;
 	
+	/*xpath for sticky ads*/
+	@AndroidFindBy(id="com.winit.starnews.hin:id/stickyAdsView")
+	public MobileElement StickyAds;
+	
+	/**
+	 * this method is for clicking on sticky ads
+	 * @param driver
+	 */
+	public void clickOnStickyAds() {
+		StickyAds.click();
+		System.out.println("clicked on stickyads succesfully");
+		
+	}
+	
+	
+	
+	/*xpath for english language*/
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='(English)']")
+	public MobileElement English;
+	/**
+	 * this method is for clicking on english language
+	 */
+	public void clickOnEnglish() {
+		English.click();
+		System.out.println("clicked on english language sucesfully");
+	}
+	/*xpath for advertisement on home page*/
+	@AndroidFindBy(xpath="//android.view.View[@text='Open']")
+	public MobileElement advertisement;
+	
+	/**
+	 * this method is for wait foe elemet to be load
+	 */
+	public void clickonAdvertisements() {
+		advertisement.click();
+		System.out.println("clicked on advertisements successfully");
+	}
+	/**
+	 * this method is for clicking on storycard
+	 */
+	public void clickonstorycard() {
+		FirstStoryCard.click();
+	}
+	
+	
 	
 	public void setHomeSection() {
 		HomeSection.click();
 	}
 
-	public void setFirstStoryCard() {
-		FirstStoryCard.click();
-	}
+	
 
 	public void setSecondStoryCard() {
 		SecondStoryCard.click();
@@ -86,19 +131,20 @@ public class HomePage {
 		ThirdStoryCard.click();
 	}
 	
-	public void setTitlestamp() {
-	titlestamp.getText();
+	public void printTitlestamp() {
+	 System.out.println(titlestamp.getText());
+	 
 	}
 
-	public void setTimestamp() {
-		timestamp.getText();
+	public void printTimestamp() {
+		 System.out.println(timestamp.getText());
 	}
 
 	public void setTags() {
 		tags.getText();
 	}
 
-	public void setViewAllBlog() {
+	public void ClickOnViewAllFoBlog(AndroidDriver driver) {
 		ViewAllBlog.click();
 	}
 

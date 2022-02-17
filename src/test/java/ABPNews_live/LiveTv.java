@@ -13,36 +13,26 @@ import com.genericUtility.BaseClass;
 import com.genericUtility.WebDriverUtility;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidKeyCode;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 @Listeners(com.genericUtility.Listeners.class)
 public class LiveTv extends BaseClass{
 		@Test
 		public void homelivetv() throws MalformedURLException, InterruptedException {
-			
+		
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
-//			driver.findElement(By.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button")).click();
-//			driver.findElement(By.id("android:id/button2")).click();
-			
-			driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
-			WebElement ele = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"For You\"]/android.widget.LinearLayout/android.widget.TextView"));
-			if (ele.isSelected()) {
-				WebElement home = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView"));
-			home.click();
-			}
-			
 			LiveTV lt = new LiveTV(driver);
-			Thread.sleep(5000);
-			driver.swipe(513, 585, 532, 1258, 500);
-			
-			Thread.sleep(7000);
-			lt.skipAd();
+			Thread.sleep(10000);
+//			driver.findElement(By.id("com.winit.starnews.hin:id/exo_subtitles")).click();
+//			
+//			lt.skipAd();
 			
 			lt.exoSub();		
-			driver.pressKeyCode(AndroidKeyCode.KEYCODE_MEDIA_PAUSE);
+			driver.pressKey(new KeyEvent(AndroidKey.MEDIA_PAUSE));
 			Thread.sleep(5000);
-			driver.pressKeyCode(AndroidKeyCode.KEYCODE_MEDIA_PLAY);
-
+			driver.pressKey(new KeyEvent(AndroidKey.MEDIA_PLAY));
+			lt.exoSub();
 			lt.qualityic();
 			lt.lowres();
 			Thread.sleep(5000);

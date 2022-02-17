@@ -6,13 +6,42 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="ABPNews_live.Advertisements">
+        <methods>
+          <include name="openApp"/>
+          <include name="StickyAds"/>
+        </methods>
+      </class> <!-- ABPNews_live.Advertisements -->
       <class name="ABPNews_live.CoronaCases">
         <methods>
-          <include name="closeApp"/>
           <include name="openApp"/>
           <include name="coronavcases"/>
         </methods>
       </class> <!-- ABPNews_live.CoronaCases -->
+      <class name="ABPNews_live.ViewAll">
+        <methods>
+          <include name="openApp"/>
+          <include name="demo"/>
+        </methods>
+      </class> <!-- ABPNews_live.ViewAll -->
+      <class name="ABPNews_live.StoryCard1">
+        <methods>
+          <include name="openApp"/>
+          <include name="storycard1"/>
+        </methods>
+      </class> <!-- ABPNews_live.StoryCard1 -->
+      <class name="ABPNews_live.Livetvpage">
+        <methods>
+          <include name="openApp"/>
+          <include name="livetvpage"/>
+        </methods>
+      </class> <!-- ABPNews_live.Livetvpage -->
+      <class name="ABPNews_live.Advertisements2">
+        <methods>
+          <include name="Advertisement"/>
+          <include name="openApp"/>
+        </methods>
+      </class> <!-- ABPNews_live.Advertisements2 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

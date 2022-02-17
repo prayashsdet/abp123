@@ -11,34 +11,32 @@ import org.testng.annotations.Test;
 import com.POM.LiveTV;
 import com.genericUtility.BaseClass;
 
-import io.appium.java_client.android.AndroidKeyCode;
+
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 
 public class LiveTvBottomBar extends BaseClass {
 	@Test
 	
-	public void homelivetv() throws MalformedURLException, InterruptedException {
+	public void livetvbottom() throws MalformedURLException, InterruptedException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//android.widget.TextView[@text='(English)']")).click();
 //		driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
-		WebElement ele = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"For You\"]/android.widget.LinearLayout/android.widget.TextView"));
-		if (ele.isSelected()) {
-			WebElement home = driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Home\"]/android.widget.LinearLayout/android.widget.TextView"));
-		home.click();
-		}
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 		
 		LiveTV lt = new LiveTV(driver);
 		lt.menuliveicon();
 		
-		Thread.sleep(10000);
-		lt.skipAd();
+		Thread.sleep(30000);
+//		lt.skipAd();
 		
-		lt.exoSub();		
-		driver.pressKeyCode(AndroidKeyCode.KEYCODE_MEDIA_PAUSE);
+				
+		driver.pressKey(new KeyEvent(AndroidKey.MEDIA_PAUSE));
 		Thread.sleep(5000);
-		driver.pressKeyCode(AndroidKeyCode.KEYCODE_MEDIA_PLAY);
-
+		driver.pressKey(new KeyEvent(AndroidKey.MEDIA_PLAY));
+		Thread.sleep(3000);
+		lt.exoSub();
 		lt.qualityic();
 		lt.lowres();
 		Thread.sleep(5000);

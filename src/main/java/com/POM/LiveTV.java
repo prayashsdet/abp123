@@ -48,60 +48,70 @@ public class LiveTV {
 	
 	public void exoSub() {
 		exosubtitles.click();
+		System.out.println("clicked on screen succesfully");
 		
 	}
 	
 	public void qualityic() {
 		qualityicon.click();
-		
+		System.out.println("clicked on quality icon successfully");
 	}
 	
 	public void lowres() {
 		low.click();
+		System.out.println("clicked on auto resolution succesfully");
 		
 	}
 	
 	public void mediumres() {
 		medium.click();
+		System.out.println("clicked on low resolution succesfully");
 		
 	}
 	
 	public void highres() {
 		high.click();
+		System.out.println("clicked on medium resolution succesfully");
 		
 	}
 	
 	public void autores() {
 		auto.click();
+		System.out.println("clicked on high resolution succesfully");
 		
 	}
 	
 	public void skipAd() {
 		skip.click();
+		System.out.println("clicked on skipAd succesfully");
 		
 	}
 	
 	public void livetvicon() {
 		liveicon.click();
-		
+	System.out.println("clicked live tv");
 	}
 	
 	public void menuliveicon() {
 		tv.click();
+		System.out.println("clicked on live menu icon succesfully");
 		
 	}
 	public void mutebtn() {
 		mute.click();
+		System.out.println("clicked on ,ute button succesfully");
 		
 	}
 	
 	public void audioPlayIcon() {
 		audioplay.click();
+		System.out.println("clicked on audioplayicon succesfully");
 		
 	}
 	
 	public void vedioplayicon() {
 		vedioplay.click();
+		System.out.println("clicked on video play icon successfully");
 		
 	}
 	

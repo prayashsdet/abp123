@@ -21,13 +21,10 @@ public class BaseClass {
 		dc.setCapability("automationName", "Appium");
 		dc.setCapability("appPackage", "com.winit.starnews.hin");
 		dc.setCapability("appActivity", ".activities.Welcome");
+		dc.setCapability("autoGrantPermissions", true);
 		URL url=new URL(" http://localhost:4723/wd/hub");
 		driver=new AndroidDriver(url, dc);
 	}
 	
-	@AfterMethod
 	
-	public void closeApp() {
-		driver.closeApp();
-	}
 }

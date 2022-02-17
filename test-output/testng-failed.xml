@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ABPNews_live.LiveTvBottomBar">
+      <class name="ABPNews_live.StoryCard1">
         <methods>
-          <include name="closeApp"/>
-          <include name="homelivetv"/>
           <include name="openApp"/>
+          <include name="storycard1"/>
         </methods>
-      </class> <!-- ABPNews_live.LiveTvBottomBar -->
+      </class> <!-- ABPNews_live.StoryCard1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
